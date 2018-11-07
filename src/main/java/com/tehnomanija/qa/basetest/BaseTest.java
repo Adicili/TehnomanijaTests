@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.relevantcodes.extentreports.model.Test;
 import com.tehnomanija.qa.util.TestUtil;
@@ -16,6 +17,7 @@ public class BaseTest {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public static Actions actions;
 	
 	public BaseTest() {
 		
@@ -40,6 +42,7 @@ public class BaseTest {
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "D:\\AdicaSmarac\\TehnomanijaOnline\\chromedriver.exe");
 			driver = new ChromeDriver();
+			actions = new Actions(driver);
 		}else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "D:\\AdicaSmarac\\TehnomanijaOnline\\geckodriver.exe");
 		}
