@@ -24,7 +24,8 @@ public class BaseTest {
 		try {
 			prop = new Properties();
 			
-			FileInputStream ip = new FileInputStream("D:\\AdicaSmarac\\TehnomanijaOnline\\src\\main\\java\\com\\tehnomanija\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\Adicili\\eclipse-workspace\\TehnomanijaTests\\TehnomanijaTests\\src\\main\\java\\com\\tehnomanija\\qa\\config\\config.properties");
+			
 			prop.load(ip);
 		}
 		catch(FileNotFoundException e){
@@ -40,11 +41,11 @@ public class BaseTest {
 		browserName = prop.getProperty("browser");
 		
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\AdicaSmarac\\TehnomanijaOnline\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Adicili\\eclipse-workspace\\TehnomanijaTests\\TehnomanijaTests\\chromedriver.exe");
 			driver = new ChromeDriver();
 			actions = new Actions(driver);
 		}else if (browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "D:\\AdicaSmarac\\TehnomanijaOnline\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Adicili\\eclipse-workspace\\TehnomanijaTests\\TehnomanijaTests\\geckodriver.exe");
 		}
 		
 		driver.manage().window().maximize();

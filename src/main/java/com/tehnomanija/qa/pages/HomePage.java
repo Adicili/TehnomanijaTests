@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tehnomanija.qa.basetest.BaseTest;
+import com.tehnomanija.qa.util.TestUtil;
 
 public class HomePage extends BaseTest {
 	
@@ -20,10 +21,13 @@ public class HomePage extends BaseTest {
 	WebElement passFieldLokator;
 	
 	@FindBy(css = ".wish-list-wrap.js-wish-list-wrap")
-	WebElement LoginBtnTabLokator;
+	WebElement wishListLokator;
+	
+	@FindBy(className = "login-button")
+	WebElement loginBtnLokator;
 	
 	@FindBy(xpath = "//a[contains(text(), 'Moj nalog')]")
-	WebElement MojNalogBtnLokator;
+	WebElement mojNalogBtnLokator;
 	
 	
 	public HomePage() {
@@ -31,15 +35,24 @@ public class HomePage extends BaseTest {
 		PageFactory.initElements(driver, this);			
 	}
 
-	public void Login() {
-		actions.moveToElement(profilTabLokator);
-		emailFieldLokator.sendKeys(prop.getProperty("username"));
-		passFieldLokator.sendKeys(prop.getProperty("password"));
-		LoginBtnTabLokator.click();
+	public void Login(String email, String password) {
+		actions.moveToElement(profilTabLokator).build().perform();
+		emailFieldLokator.sendKeys(email);
+		passFieldLokator.sendKeys(password);
+		loginBtnLokator.click();
 	}
 	
-	public void UserNameDisplayed() {
+	public boolean UserNameDisplayed(String expectedUserName){
 		
+		TestUtil.Sleep(2);
+	
+		String userName = profilTabLokator.getText().toLowerCase();
+		
+		if(userName.equals(expectedUserName)) {
+			return true;
+		}else {
+			return false;
+		}
 		
 	}
 	
