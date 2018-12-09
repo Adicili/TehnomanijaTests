@@ -12,10 +12,11 @@ import com.tehnomanija.qa.util.TestUtil;
 
 public class HomePageTests extends BaseTest{
 	
+	TestUtil testUtil;
 	HomePage homePage;
 	String sheetName = "Users";
 	
-	public HomePageTests() {
+	public HomePageTests() {		
 		super();
 	}
 	
@@ -23,19 +24,20 @@ public class HomePageTests extends BaseTest{
 	public void setUp() {
 		initialization();
 		homePage = new HomePage();
+		testUtil = new TestUtil();
 	}
 	
-	@DataProvider
+	/*@DataProvider
 	public Object[][] getTestData(){
-		Object data[][] = TestUtil.getTestData(sheetName);
+		Object data[][] = testUtil.getTestData(sheetName);
 		return data;
-	}
+	}*/
 	
 	
-	@Test(dataProvider = "getTestData")
-	public void VerifyIfUserIsLoggedIn(String email, String password, String username){
- 		homePage.Login(email, password);
-		Assert.assertTrue(homePage.UserNameDisplayed(username), "User name is not displayed!!");		
+	@Test
+	public void VerifyIfUserIsLoggedIn(){
+ 		homePage.Login(prop.getProperty("username"), prop.getProperty("password"));
+		Assert.assertTrue(homePage.UserNameDisplayed("mirko"), "User name is not displayed!!");		
 	}
 	
 	@AfterMethod

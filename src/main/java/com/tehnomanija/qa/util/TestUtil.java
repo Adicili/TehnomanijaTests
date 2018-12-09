@@ -19,7 +19,7 @@ public class TestUtil {
 	static Workbook book;
 	static Sheet sheet;
 	
-	public static Object[][] getTestData(String sheetName){
+	public Object[][] getTestData(String sheetName){
 		FileInputStream file = null;
 		
 		try {
@@ -48,7 +48,7 @@ public class TestUtil {
 		
 	}
 	
-	public static void Sleep(long sec) {
+	public void Sleep(long sec) {
 		try {
 			Thread.sleep(sec*1000);
 		}catch(InterruptedException e){

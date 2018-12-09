@@ -2,32 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31932" started-at="2018-11-08T16:09:10Z" finished-at="2018-11-08T16:09:42Z">
+  <suite name="Default suite" duration-ms="10250" started-at="2018-12-09T13:41:46Z" finished-at="2018-12-09T13:41:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31932" started-at="2018-11-08T16:09:10Z" finished-at="2018-11-08T16:09:42Z">
+    <test name="Default test" duration-ms="10250" started-at="2018-12-09T13:41:46Z" finished-at="2018-12-09T13:41:56Z">
       <class name="com.tehnomanija.qa.tests.HomePageTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@4b5d6a01]" name="setUp" is-config="true" duration-ms="6855" started-at="2018-11-08T17:09:10Z" finished-at="2018-11-08T17:09:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@d8355a8]" name="setUp" is-config="true" duration-ms="6803" started-at="2018-12-09T14:41:46Z" finished-at="2018-12-09T14:41:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="VerifyIfUserIsLoggedIn(java.lang.String, java.lang.String)[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@4b5d6a01]" name="VerifyIfUserIsLoggedIn" duration-ms="21967" started-at="2018-11-08T17:09:17Z" data-provider="getTestData" finished-at="2018-11-08T17:09:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mirkocar2019@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[bradonja55]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="VerifyIfUserIsLoggedIn()[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@d8355a8]" name="VerifyIfUserIsLoggedIn" duration-ms="2676" started-at="2018-12-09T14:41:53Z" finished-at="2018-12-09T14:41:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyIfUserIsLoggedIn -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@4b5d6a01]" name="cleanUp" is-config="true" duration-ms="681" started-at="2018-11-08T17:09:41Z" finished-at="2018-11-08T17:09:42Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tehnomanija.qa.tests.HomePageTests@d8355a8]" name="cleanUp" is-config="true" duration-ms="749" started-at="2018-12-09T14:41:55Z" finished-at="2018-12-09T14:41:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->

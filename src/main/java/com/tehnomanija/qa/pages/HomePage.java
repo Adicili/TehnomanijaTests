@@ -9,6 +9,8 @@ import com.tehnomanija.qa.util.TestUtil;
 
 public class HomePage extends BaseTest {
 	
+	TestUtil testUtil;
+	
 	//Home Page Repository
 
 	@FindBy(className = "user-name")
@@ -31,7 +33,7 @@ public class HomePage extends BaseTest {
 	
 	
 	public HomePage() {
-		
+		testUtil = new TestUtil();
 		PageFactory.initElements(driver, this);			
 	}
 
@@ -44,7 +46,7 @@ public class HomePage extends BaseTest {
 	
 	public boolean UserNameDisplayed(String expectedUserName){
 		
-		TestUtil.Sleep(2);
+		testUtil.Sleep(2);
 	
 		String userName = profilTabLokator.getText().toLowerCase();
 		
